@@ -138,6 +138,7 @@ public:
     // the lock/unlock APIs must be used from the same thread
     status_t    lock(SurfaceInfo* info, Region* dirty = NULL);
     status_t    unlockAndPost();
+    status_t    unlockAndPost2();
 
     sp<IBinder> asBinder() const;
 #ifdef QCOM_HARDWARE
@@ -173,6 +174,7 @@ private:
     // A cache of Surface objects that have been deserialized into this process.
     static Mutex sCachedSurfacesLock;
     static DefaultKeyedVector<wp<IBinder>, wp<Surface> > sCachedSurfaces;
+    
 };
 
 }; // namespace android

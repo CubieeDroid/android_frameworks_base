@@ -226,7 +226,7 @@ void SpriteController::doUpdateSprites() {
                             surfaceInfo.w, surfaceInfo.h, paint);
                 }
 
-                status = surface->unlockAndPost();
+                status = surface->unlockAndPost2();
                 if (status) {
                     LOGE("Error %d unlocking and posting sprite surface after drawing.", status);
                 } else {

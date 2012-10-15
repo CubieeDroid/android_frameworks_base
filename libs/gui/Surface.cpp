@@ -1,3 +1,4 @@
+
 /*
  * Copyright (C) 2007 The Android Open Source Project
  *
@@ -385,6 +386,11 @@ status_t Surface::lock(SurfaceInfo* other, Region* inOutDirtyRegion) {
 status_t Surface::unlockAndPost() {
     return SurfaceTextureClient::unlockAndPost();
 }
+
+status_t Surface::unlockAndPost2() {
+    return SurfaceTextureClient::unlockAndPost();
+}
+
 
 #ifdef QCOM_HARDWARE
 status_t Surface::setStereoscopic3DFormat(int format) {
