@@ -3208,6 +3208,7 @@ public class PowerManagerService extends IPowerManager.Stub
                 mDimDelay = -1;
             }
         }
+	mScreenOffDelay=mMaximumScreenOffTimeout;
         if (mSpew) {
             Slog.d(TAG, "setScreenOffTimeouts mKeylightDelay=" + mKeylightDelay
                     + " mDimDelay=" + mDimDelay + " mScreenOffDelay=" + mScreenOffDelay

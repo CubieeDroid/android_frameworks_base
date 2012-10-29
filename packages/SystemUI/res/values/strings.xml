@@ -405,4 +405,7 @@
     <string name="navbar_menu_big_button">Menu button</string>
 
     <string name="powerwidget_screen_timeout_toast">Screen timeout set to: %1$d %2$s</string>
+    <!-- ethernet string  -->
+    <string name="ethernet_link">Ethernet connect to network</string>
+    <string name="ethernet_description">Ethernet</string>
 </resources>

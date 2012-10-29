@@ -112,10 +112,11 @@ final class NativeDaemonConnector implements Runnable, Handler.Callback, Watchdo
         LocalSocket socket = null;
 
         try {
+	 Slog.d("++++++++++","addr is ");
             socket = new LocalSocket();
             LocalSocketAddress address = new LocalSocketAddress(mSocket,
                     LocalSocketAddress.Namespace.RESERVED);
-
+            Slog.d("++++++++++","addr is "+address);
             socket.connect(address);
 
             InputStream inputStream = socket.getInputStream();
@@ -215,6 +216,7 @@ final class NativeDaemonConnector implements Runnable, Handler.Callback, Watchdo
         }
 
         if (LOCAL_LOGD) Slog.d(TAG, String.format("SND -> {%s} {%s}", command, argument));
+
         if (mOutputStream == null) {
             Slog.e(TAG, "No connection to daemon", new IllegalStateException());
             throw new NativeDaemonConnectorException("No output stream!");
